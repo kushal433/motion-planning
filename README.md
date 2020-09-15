@@ -33,11 +33,13 @@ can be incorporated into the development of a variety of different planning algo
 # Dubin's Car
 
 Dubin’s Car was introduced by a famous mathematician and statistician Lester Dubin in the year 1957.It is a simplified mathematical model of a car that moves in the x and y plane. The car's location is specified by the location of the center of the car's rear axle and the orientation of the car. The car cannot move sideways because the rear wheels would have to slide instead of roll. The Dubin’s car model stipulates that the car moves forward at a constant speed and has a maximum steering angle that translates into a minimum turning radius. Dubin’s Car can only move forward and not backwards with constant velocity as 1 m/s. The car can only have three controls which are Turn Right at maximum, Turn Left at maximum and Go Straight.
-RRT2
+
+![](rrt2.PNG)
 
 # Pseudo Code
 There are many ways in which we can implement the local planner in our RRT algorithm such as defining six scenarios for the Dubin’s car which include {RSR,LSL,RSL,LSR,RLR AND LRL} and select the optimal scenario to traverse the path or apply random controls (or a sequence of random controls ) for a fixed amount of time and select the control that leads you closest to the random configuration. In our Implementation, we have defined three controls (Left, Straight, Right) which are applied for a fixed amount of time and selected the control which has the minimum distance to the random configuration.
-RRT3
+
+![](rrt3.PNG)
 
 # Future Work
 RRT can help us find out the feasible path for the car to travel and not the optimal path. RRT Algorithm also cannot incorporate additional cost information such as smoothness or length of the path to solve a path planning problem. For this reason, it is desirable to use variants of the RRT that converges to the optimum path such as RRT* to make it more dynamic. The use of Dubin’s cars as model to represent a non-holonomic vehicle model is seen to be restrictive and a misrepresentation of an actual car model. Relaxing the vehicle path constraints by using a Smooth Car model would be necessary to find a more optimal path.
