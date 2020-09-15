@@ -26,7 +26,9 @@ randomly chosen point to the tree. RRT is particularly suited for path planning
 problems that involve obstacles and differential constraints. Usually, an RRT alone is
 insufficient to solve a planning problem. Thus, it can be considered as a component that
 can be incorporated into the development of a variety of different planning algorithms.
-RRT1
+
+![](rrt1.PNG)
+
 
 # Dubin's Car
 
